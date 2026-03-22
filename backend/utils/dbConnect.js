@@ -4,7 +4,7 @@ const connectDB = async ()=> {
     try {
         await mongoose.connect(process.env.MONGO_URI)
         .then(() => console.log("MongoDB connected successfully")
-        )
+        ) // no need of await keyword if you're useing .then() method
     } catch (error) {
         console.error("MongoDB connection error:", error);
         process.exit(1);

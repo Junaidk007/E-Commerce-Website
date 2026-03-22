@@ -32,7 +32,7 @@ module.exports.registerController = async (req, res) => {
     // Save the new user to the database
     await newUser.save();
 
-    res.status(201).json({
+    res.status(200).json({
         message: 'User registered successfully',
         success: true
     });

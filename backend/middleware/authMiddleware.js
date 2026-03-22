@@ -10,7 +10,7 @@ module.exports.userVerify = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET); 
-        res.user = decoded; 
+        req.user = decoded; 
     } catch (error) {
         console.log(`error in user verification: ${error.message}`)
         return res.status(401).json({ 

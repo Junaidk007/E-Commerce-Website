@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs'); // no need of bcrypt package here
 
 module.exports.generateToken = (user) => {
     return jwt.sign(
